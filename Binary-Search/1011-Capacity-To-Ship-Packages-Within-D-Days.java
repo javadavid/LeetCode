@@ -24,19 +24,19 @@ class Solution {
 
     }
 
-    public boolean checkCanDelivery(int[] weights, int capcity, int days) {
+    public boolean checkCanDelivery(int[] weights, int capacity, int days) {
         int count = 0;
         int sum = 0;
         for(int weight: weights) {
             sum += weight;
-            // if(weight > capcity) {
+            // if(weight > capacity) {
             //     return false;
             // }
-            if(sum > capcity) {
+            if(sum > capacity) {
                 count ++;
                 sum = weight;
             }
-            if(sum == capcity) {
+            if(sum == capacity) {
                 count ++;
                 sum = 0;
             }
@@ -48,14 +48,14 @@ class Solution {
 
     }
 
-    // public boolean checkCanDelivery(int[] weights, int capcity, int days) {
+    // public boolean checkCanDelivery(int[] weights, int capacity, int days) {
     //     int count = 0;
         
     //     for(int i = 0; i < weights.length;) {
 
     //         int j = i;
     //         int sum = 0;
-    //         while(j < weights.length && sum + weights[j] <= capcity) {
+    //         while(j < weights.length && sum + weights[j] <= capacity) {
     //             sum += weights[j];
     //             j++;
     //         }
